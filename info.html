@@ -7,7 +7,6 @@
     <title>Kurt Ryam</title>
     <link href="styles/output.css" rel="stylesheet">
     <script src="scripts/script.js"></script>
-    <script src="scripts/image.js"></script>
     <script src="scripts/modal.js"></script>
 </head>
 
@@ -21,29 +20,78 @@
             </div>
             <div class="inline-flex space-x-4">
                 <a href="index.html" class="flex items-center group"><span id="reel-indicator"
-                        class="indicator-button bg-black"></span><span class="flex-1">Reel <span
+                        class="indicator-button"></span><span class="flex-1">Reel <span
                             class="hover-anim group-hover:w-full"></span></span></a>
                 <a href="info.html" class="flex items-center group"><span id="info-indicator"
-                        class="indicator-button"></span><span class="flex-1">Info <span
+                        class="indicator-button bg-black"></span><span class="flex-1">Info <span
                             class="hover-anim group-hover:w-full"></span></span></a>
             </div>
         </div>
     </header>
 
     <div class="flex flex-col max-h-screen">
-        <section class="w-full mt-auto">
-            <div class="flex flex-wrap w-full justify-center items-center h-screen">
-                <div
-                    class="h-52 m-3 sm:h-screen img-borders w-full overflow-hidden grayscale hover:grayscale-0 transition-all ease-in-out duration-[1000ms] animate-fade animate-once animate-ease-out">
-                    <img id="imageElement" class="img"
-                        src="https://media4.giphy.com/media/ycfHiJV6WZnQDFjSWH/giphy.gif?cid=ecf05e47qighqk1nnxb6mch3tjfnzh04fljstf5r6zfdg07s&ep=v1_gifs_search&rid=giphy.gif&ct=g"
-                        alt="Description of the image">
+        <section class="w-full mt-auto pt-20 lg:pt-40">
+            <div
+                class="w-full grid grid-cols-5 lg:grid-cols-12 p-3 px-3 lg:px-4 mb-8 md:mb-6 animate-flip-up animate-once animate-ease-out">
+                <span class="block col-span-5 lg:col-span-6 mb-6 lg:mb-0">
+                    <p>Bio</p>
+                </span>
+                <div class="col-span-5 lg:col-span-6">
+                    <div class="w-11/12 lg:w-full max-w-[720px]">
+                        <p>Hello! I'm Kurt Ryam Abadinas, an aspiring IT professional currently pursuing Bachelor of
+                            Science in Information
+                            Technology, with a strong foundation in Cybersecurity, Software Development and Database
+                            Management.</p>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="w-full grid grid-cols-5 lg:grid-cols-12 p-3 px-3 lg:px-4 mb-8 md:mb-6 animate-flip-up animate-once animate-ease-out">
+                <span class="block col-span-5 lg:col-span-6 mb-6 lg:mb-0">
+                    <p>Services</p>
+                </span>
+                <div class="col-span-5 lg:col-span-6">
+                    <div class="w-full max-w-[800px]">
+                        <ul>
+                            <li class="text-black false false"><button class="cursor-text a11y-focus">Web
+                                    Development</button>
+                            </li>
+                            <li class="text-black false false"><button
+                                    class="cursor-text a11y-focus">Networking</button></li>
+                            <li class="text-black false false"><button
+                                    class="cursor-text a11y-focus">Cybersecurity</button>
+                            </li>
+                            <li class="text-black false false"><button class="cursor-text a11y-focus">Database
+                                    Management</button></li>
+                            <li class="text-black false false"><button class="cursor-text a11y-focus">App
+                                    Development</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="w-full grid grid-cols-5 lg:grid-cols-12 p-3 px-3 lg:px-4 mb-8 md:mb-6 animate-flip-up animate-once animate-ease-out">
+                <span class="block col-span-5 lg:col-span-6 mb-6 lg:mb-0">
+                    <p>Portfolio</p>
+                </span>
+                <div class="col-span-5 lg:col-span-6">
+                    <div class="w-full">
+                        <ul>
+                            <li class="flex"><span class="block">Interactive Language
+                                    Learning App</span></li>
+                            <li class="flex"><span class="block">WLR Messaging App</span>
+                            </li>
+                            <li class="flex"><span class="block">CSU Exam Schedule
+                                    Tracker</span></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
     </div>
 
-    <footer id="footer" class="fixed bottom-0 w-full mt-auto p-3 px-3">
+    <footer id="footer" class="lg:fixed bottom-0 w-full mt-auto p-3 px-3">
         <div class="grid grid-cols-12 animate-fade-up animate-ease-in-out">
             <div class="lg:col-start-1 col-span-12 lg:col-span-3 flex space-x-1 mb-2 lg:hidden">
                 <span class="block w-9/12">IT Professional — Web Development, Web Design, Networking</span>
