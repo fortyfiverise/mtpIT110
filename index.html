@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurt Ryam</title>
+    <link href="styles/output.css" rel="stylesheet">
+    <script src="scripts/script.js"></script>
+    <script src="scripts/image.js"></script>
+    <script src="scripts/modal.js"></script>
+    <script src="scripts/routes.js"></script>
+</head>
+
+<body class="font-custom">
+
+    <header class="absolute top-0 w-full p-3 px-3 lg:px-4">
+        <div class="flex justify-between animate-fade-down animate-ease-in-out">
+            <div class="inline-block">Kurt Ryam</span>
+            </div>
+            <div class="hidden lg:block">IT Professional — Web Development, Web Design, Networking
+            </div>
+            <div class="inline-flex space-x-4">
+                <a href="#home" onclick="reelPage()" class="flex items-center group"><span id="reel-indicator"
+                        class="indicator-button bg-black"></span><span class="flex-1">Reel <span
+                            class="hover-anim group-hover:w-full"></span></span></a>
+                <a href="#info" onclick="infoPage()" class="flex items-center group"><span id="info-indicator"
+                        class="indicator-button"></span><span class="flex-1">Info <span
+                            class="hover-anim group-hover:w-full"></span></span></a>
+            </div>
+        </div>
+    </header>
+
+    <div id="app" class="flex flex-col max-h-screen">
+    </div>
+
+    <footer id="footer" class="fixed bottom-0 w-full mt-auto p-3 px-3 lg:px-4">
+        <div class="grid grid-cols-12 animate-fade-up animate-ease-in-out">
+            <div class="lg:col-start-1 col-span-12 lg:col-span-3 flex space-x-1 mb-2 lg:hidden"
+                style="visibility: visible;">
+                <span class="block w-9/12">IT Professional — Web Development, Web Design, Networking</span>
+            </div>
+            <div class="lg:col-start-1 col-span-12 lg:col-span-3 flex space-x-1 mb-2 lg:mb-0"
+                style="visibility: visible;">
+                <a href="https://www.instagram.com/kurtryam_/" target="_blank" rel="noopener noreferrer"
+                    class="group inline-block">
+                    Instagram<span class="hover-anim group-hover:w-full"></span>
+                </a>,
+                <a href="https://twitter.com/kurtryam_" target="_blank" rel="noopener noreferrer"
+                    class="group inline-block">
+                    Twitter<span class="hover-anim group-hover:w-full"></span>
+                </a>,
+                <a href="https://github.com/oshantt" target="_blank" rel="noopener noreferrer"
+                    class="group inline-block">
+                    Github<span class="inline lg:hidden">,</span><span class="hover-anim group-hover:w-full"></span>
+                </a>
+                <div id="openModalsm" class="lg:ml-auto w-auto lg:text-right"><span class="group inline-block">Contact
+                        me<span class="hover-anim group-hover:w-full"></span></span>
+                </div>
+            </div>
+            <div class="lg:col-start-4 col-span-12 lg:col-span-6 hidden lg:block" style="visibility: visible;">
+                <span class="block lg:mx-auto lg:text-center flex-1">
+                    <span class="block lg:mx-auto lg:text-center flex-1">
+                        <time id="current-time-lg">--:--:--</time>
+                    </span>
+                </span>
+            </div>
+            <div class="lg:col-start-11 col-span-12 lg:col-span-2 hidden lg:block" style="visibility: visible;">
+                <div id="openModal" class="lg:ml-auto w-auto lg:text-right"><span class="group inline-block">Contact
+                        me<span class="hover-anim group-hover:w-full"></span></span>
+                </div>
+            </div>
+            <div class="lg:col-start-4 col-span-12 lg:col-span-6 block lg:hidden" style="visibility: visible;"><span
+                    class="block lg:mx-auto lg:text-center flex-1"><span
+                        class="block lg:mx-auto lg:text-center flex-1"><time
+                            id="current-time-md">--:--:--</time></span></span></div>
+        </div>
+    </footer>
+
+
+    <div id="modal" class="hidden fixed inset-0 items-center justify-center animate-fade animate-ease-in-out">
+        <div id="modal-bg" class="absolute w-full h-full bg-slate-700 opacity-50"></div>
+
+        <div class="modal-container bg-white w-11/12 md:max-w-2xl mx-auto rounded shadow-lg z-50 overflow-y-auto">
+            <div class="modal-content py-4 text-left px-6">
+                <div class="flex justify-between">
+                    <span class="block pb-3">Name</span>
+                    <span id="close-modal" class="indicator-button"></span>
+                </div>
+                <input type="text" class="w-full p-2 border rounded mb-3" placeholder="Enter your name" />
+                <span class="block pb-3">Email</span>
+                <input type="text" class="w-full p-2 border rounded mb-3" placeholder="Enter your email" />
+                <span class="block pb-3">Message</span>
+                <textarea class="w-full p-2 border rounded mb-3" rows="4" placeholder="Enter your message"></textarea>
+                <div class="flex justify-end">
+                    <span class="inline-block group"><span class="flex-1">Send <span
+                                class="hover-anim group-hover:w-full"></span></span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
