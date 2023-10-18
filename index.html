@@ -10,6 +10,7 @@
     <script src="scripts/image.js"></script>
     <script src="scripts/modal.js"></script>
     <script src="scripts/routes.js"></script>
+    <script src="scripts/validate.js"></script>
 </head>
 
 <body class="font-custom">
@@ -21,10 +22,10 @@
             <div class="hidden lg:block">IT Professional — Web Development, Web Design, Networking
             </div>
             <div class="inline-flex space-x-4">
-                <a href="#home" onclick="reelPage()" class="flex items-center group"><span id="reel-indicator"
+                <a href="#home" onclick="togglePage('reel')" class="flex items-center group"><span id="reel-indicator"
                         class="indicator-button bg-black"></span><span class="flex-1">Reel <span
                             class="hover-anim group-hover:w-full"></span></span></a>
-                <a href="#info" onclick="infoPage()" class="flex items-center group"><span id="info-indicator"
+                <a href="#info" onclick="togglePage('info')" class="flex items-center group"><span id="info-indicator"
                         class="indicator-button"></span><span class="flex-1">Info <span
                             class="hover-anim group-hover:w-full"></span></span></a>
             </div>
@@ -34,14 +35,12 @@
     <div id="app" class="flex flex-col max-h-screen">
     </div>
 
-    <footer id="footer" class="fixed bottom-0 w-full mt-auto p-3 px-3 lg:px-4">
+    <footer id="footer" class="fixed bottom-0 w-full mt-auto p-3 px-3">
         <div class="grid grid-cols-12 animate-fade-up animate-ease-in-out">
-            <div class="lg:col-start-1 col-span-12 lg:col-span-3 flex space-x-1 mb-2 lg:hidden"
-                style="visibility: visible;">
+            <div class="lg:col-start-1 col-span-12 lg:col-span-3 flex space-x-1 mb-2 lg:hidden">
                 <span class="block w-9/12">IT Professional — Web Development, Web Design, Networking</span>
             </div>
-            <div class="lg:col-start-1 col-span-12 lg:col-span-3 flex space-x-1 mb-2 lg:mb-0"
-                style="visibility: visible;">
+            <div class="lg:col-start-1 col-span-12 lg:col-span-3 flex space-x-1 mb-2 lg:mb-0">
                 <a href="https://www.instagram.com/kurtryam_/" target="_blank" rel="noopener noreferrer"
                     class="group inline-block">
                     Instagram<span class="hover-anim group-hover:w-full"></span>
@@ -54,23 +53,24 @@
                     class="group inline-block">
                     Github<span class="inline lg:hidden">,</span><span class="hover-anim group-hover:w-full"></span>
                 </a>
-                <div id="openModalsm" class="lg:ml-auto w-auto lg:text-right"><span class="group inline-block">Contact
+                <div id="openModalsm" class="lg:ml-auto w-auto lg:text-right lg:hidden"><span
+                        class="group inline-block">Contact
                         me<span class="hover-anim group-hover:w-full"></span></span>
                 </div>
             </div>
-            <div class="lg:col-start-4 col-span-12 lg:col-span-6 hidden lg:block" style="visibility: visible;">
+            <div class="lg:col-start-4 col-span-12 lg:col-span-6 hidden lg:block">
                 <span class="block lg:mx-auto lg:text-center flex-1">
                     <span class="block lg:mx-auto lg:text-center flex-1">
                         <time id="current-time-lg">--:--:--</time>
                     </span>
                 </span>
             </div>
-            <div class="lg:col-start-11 col-span-12 lg:col-span-2 hidden lg:block" style="visibility: visible;">
+            <div class="lg:col-start-11 col-span-12 lg:col-span-2 hidden lg:block">
                 <div id="openModal" class="lg:ml-auto w-auto lg:text-right"><span class="group inline-block">Contact
                         me<span class="hover-anim group-hover:w-full"></span></span>
                 </div>
             </div>
-            <div class="lg:col-start-4 col-span-12 lg:col-span-6 block lg:hidden" style="visibility: visible;"><span
+            <div class="lg:col-start-4 col-span-12 lg:col-span-6 block lg:hidden"><span
                     class="block lg:mx-auto lg:text-center flex-1"><span
                         class="block lg:mx-auto lg:text-center flex-1"><time
                             id="current-time-md">--:--:--</time></span></span></div>
@@ -85,16 +85,20 @@
             <div class="modal-content py-4 text-left px-6">
                 <div class="flex justify-between">
                     <span class="block pb-3">Name</span>
-                    <span id="close-modal" class="indicator-button"></span>
+                    <span id="close-modal" class="indicator-button mt-1 hover:bg-black"></span>
                 </div>
-                <input type="text" class="w-full p-2 border rounded mb-3" placeholder="Enter your name" />
+                <input type="text" class="w-full p-2 border rounded mb-3" placeholder="Enter your name" id="nameInput"
+                    name="name" />
                 <span class="block pb-3">Email</span>
-                <input type="text" class="w-full p-2 border rounded mb-3" placeholder="Enter your email" />
+                <input type="email" class="w-full p-2 border rounded mb-3" placeholder="Enter your email"
+                    id="emailInput" name="email" />
                 <span class="block pb-3">Message</span>
-                <textarea class="w-full p-2 border rounded mb-3" rows="4" placeholder="Enter your message"></textarea>
-                <div class="flex justify-end">
-                    <span class="inline-block group"><span class="flex-1">Send <span
-                                class="hover-anim group-hover:w-full"></span></span></span>
+                <textarea class="w-full p-2 border rounded mb-3" rows="3" placeholder="Enter your message"
+                    name="message" id="messageInput"></textarea>
+                <div class="flex justify-between">
+                    <div class="block" id="messageResult"></div>
+                    <button class="inline-block group"><span class="flex-1" id="submit">Send <span
+                                class="hover-anim group-hover:w-full"></span></span></button>
                 </div>
             </div>
         </div>

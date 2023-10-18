@@ -18,22 +18,20 @@ setInterval(updateTime, 1000);
 // Initial call to set the time
 updateTime();
 
-function reelPage() {
+function togglePage(page) {
   const footer = document.getElementById("footer");
   const reelbtn = document.getElementById("reel-indicator");
   const infobtn = document.getElementById("info-indicator");
-  reelbtn.classList.add("bg-black");
-  infobtn.classList.remove("bg-black");
-  footer.classList.remove("lg:fixed");
-  footer.classList.add("fixed");
-}
 
-function infoPage() {
-  const footer = document.getElementById("footer");
-  const reelbtn = document.getElementById("reel-indicator");
-  const infobtn = document.getElementById("info-indicator");
-  reelbtn.classList.remove("bg-black");
-  infobtn.classList.add("bg-black");
-  footer.classList.remove("fixed");
-  footer.classList.add("lg:fixed");
+  if (page === "reel") {
+    reelbtn.classList.add("bg-black");
+    infobtn.classList.remove("bg-black");
+    footer.classList.remove("lg:fixed");
+    footer.classList.add("fixed");
+  } else if (page === "info") {
+    reelbtn.classList.remove("bg-black");
+    infobtn.classList.add("bg-black");
+    footer.classList.remove("fixed");
+    footer.classList.add("lg:fixed");
+  }
 }
